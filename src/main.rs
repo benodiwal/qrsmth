@@ -1,8 +1,13 @@
+use cli::Args;
 use qrcode::types::QrError;
-use qrsmth_lib::{generate_qr_string, print_qr};
+use qrsmth_lib::print_qr;
+
+mod cli;
 
 fn main() -> Result<(), QrError> {
-    // print_qr("www.google.com")?;
-    generate_qr_string("www.google.com")?;
+    let args = Args::parse_args();
+    let input = args.input.unwrap();
+    print_qr(input)?;
+
     Ok(())
 }

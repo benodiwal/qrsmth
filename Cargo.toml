@@ -9,9 +9,13 @@ name = "qrsmth_lib"
 path = "src/lib.rs"
 
 [dependencies]
-clap = "4.5.4"
 crossterm = "0.27.0"
 qrcode = "0.14.0"
+clap = { version = "4.5.4", features = ["derive"] }
+
+[[bin]]
+name = "qrsmth"
+path = "src/main.rs"
 
 [dev-dependencies]
 regex = { version = "1.10.4", default-features = false, features = ["std"] }
