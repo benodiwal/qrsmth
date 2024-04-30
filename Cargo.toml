@@ -1,0 +1,17 @@
+[package]
+name = "qrsmth"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sachin Beniwal <sachinbeniwal0101@gmail.com>"]
+
+[lib]
+name = "qrsmth_lib"
+path = "src/lib.rs"
+
+[dependencies]
+clap = "4.5.4"
+crossterm = "0.27.0"
+qrcode = "0.14.0"
+
+[dev-dependencies]
+regex = { version = "1.10.4", default-features = false, features = ["std"] }
